@@ -186,6 +186,8 @@ Key concepts:
 - Policies
 
 
+All compute in AWS runs 'as something', IAM determines this.
+
 ---
 
 ### Amazon IAM - User, Groups, Roles
@@ -194,7 +196,11 @@ User - created on account, can access console, get programatic access to resourc
 
 Group - set of users, can have policies attached to.
 
-Role - abstract concept, can't access console or get credentials, can have policies attached to. Have to be assumed by user or service.
+
+
+Role 
+- abstract concept, can't access console or get credentials, can have policies attached to. 
+- Have to be assumed by user or service based on assumption policy, users need to use STS.
 
 ---
 
@@ -220,9 +226,85 @@ Policy links Principal (user, group, role) to actions and resources.
 
 ---
 
-### todo
+### Amazon IAM - Policy example
+
+Want Read/Write to S3 bucket (online cloud storage)
+
+<img width="80%" src="AwsS3PolicyExample.png" />
 
 ---
+
+### AWS resource provisioning.
+
+Resources can be created:
+
+- by clicking in AWS console
+
+- with aws-cli
+
+`aws ec2 run-instances --image-id ami-1a2b3c4d --count 1 --instance-type c3.large --key-name MyKeyPair --security-groups MySecurityGroup`
+
+- with language SDK (python boto)
+
+`run_instances(image_id, min_count=1, max_count=1, key_name=None, security_groups=None, ...)`
+
+with infrastructure as code tool
+- AWS cloudformation
+- Hashicorp terraform
+
+---
+
+### AWS resource provisioning - AWS cloudformation
+
+```
+
+"Instance" : {
+  "Type" : "AWS::EC2::Instance",
+  "Properties" : {
+    "KeyName" : { "Ref" : "KeyName" },
+    "InstanceType" : { "Ref" : "InstanceType" },
+    "ImageId" : "ami-dfhbwdjhbfw",
+    "NetworkInterfaces" : [
+      { 
+        "SubnetId" : { "Ref" : "PublicSubnet" },
+        ...
+      }
+    ],
+    "Tags" : [
+        {"Key": "Name", "Value": "Project_Instance"}
+     ]
+  }},
+```
+
+---
+
+### AWS resource provisioning - Terraform
+
+```
+provider "aws" {
+  region = "eu-west-1"
+}
+
+resource "aws_instance" "web" {
+  ami           = "ami-dfhbwdjhbfw"
+  instance_type = "t2.micro"
+
+  tags {
+    Name = "Project_Instance"
+  }
+}
+```
+
+---
+
+### Demo? EC2 -> S3
+
+---
+
+### The end
+
+Any questions?
+
 
 
     </textarea>
