@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Cloud study group - AWS Lambda
+
+---
+
+### Amazon IAM - Policy example
+
+Want Read/Write to S3 bucket (online cloud storage)
+
+<img width="80%" src="AwsS3PolicyExample.png" />
+
+---
+
+### Demo Event -> Lambda -> S3
+
+Setup a cloud 'cron' job to write to s3 every 30 seconds
+<a href="http://jeremievallee.com/2017/03/26/aws-lambda-terraform/">inspired by</a>
+Need
+
+- S3 bucket (for deploying lambda)
+- Event
+- Lambda
+- S3 bucket (to write to)
+- Permissions for above (invocation and access)
+
+---
+
+### The end
+
+Any questions?
+
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
