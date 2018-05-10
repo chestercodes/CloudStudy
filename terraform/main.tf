@@ -5,5 +5,5 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "sl-brs-cloud-study" {
-  bucket = "sl-cloud-study-resources"
+  bucket = "sl-brs-cloud-study"
 }
