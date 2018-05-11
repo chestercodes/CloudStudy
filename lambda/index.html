@@ -32,59 +32,108 @@ class: center, middle
 - Demo - cloud cron
 
 ---
-<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>
-<img width="100%" src="deep-dive-on-aws-lambda/01.png" />
+<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>deep-dive-on-aws-lambda/01
+<img width="100%" src="slideshare/deep-dive-on-aws-lambda/01.png" />
 ---
-<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>
-<img width="100%" src="deep-dive-on-aws-lambda/02.png" />
+<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>deep-dive-on-aws-lambda/02
+<img width="100%" src="slideshare/deep-dive-on-aws-lambda/02.png" />
 ---
-<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>
-<img width="100%" src="deep-dive-on-aws-lambda/03.png" />
+<a href="https://www.slideshare.net/AmazonWebServices/intro-to-aws-lambda-london-loft">(source)</a>intro-to-aws-lambda-london-loft/01
+<img width="100%" src="slideshare/intro-to-aws-lambda-london-loft/01.png" />
 ---
-<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>
-<img width="100%" src="deep-dive-on-aws-lambda/04.png" />
+<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>deep-dive-on-aws-lambda/05
+<img width="100%" src="slideshare/deep-dive-on-aws-lambda/05.png" />
 ---
-<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>
-<img width="100%" src="deep-dive-on-aws-lambda/05.png" />
+<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>deep-dive-on-aws-lambda/06
+<img width="100%" src="slideshare/deep-dive-on-aws-lambda/06.png" />
 ---
-<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>
-<img width="100%" src="deep-dive-on-aws-lambda/06.png" />
+<a href="https://www.slideshare.net/scottleber/aws-lambda-73153540">(source)</a>aws-lambda-73153540/01
+<img width="100%" src="slideshare/aws-lambda-73153540/01.png" />
 ---
-<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>
-<img width="100%" src="deep-dive-on-aws-lambda/07.png" />
+<a href="https://www.slideshare.net/scottleber/aws-lambda-73153540">(source)</a>aws-lambda-73153540/02
+<img width="100%" src="slideshare/aws-lambda-73153540/02.png" />
 ---
-<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>
-<img width="100%" src="deep-dive-on-aws-lambda/08.png" />
+<a href="https://www.slideshare.net/scottleber/aws-lambda-73153540">(source)</a>aws-lambda-73153540/03
+<img width="100%" src="slideshare/aws-lambda-73153540/03.png" />
 ---
-<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>
-<img width="100%" src="deep-dive-on-aws-lambda/09.png" />
+<a href="https://www.slideshare.net/scottleber/aws-lambda-73153540">(source)</a>aws-lambda-73153540/05
+<img width="100%" src="slideshare/aws-lambda-73153540/05.png" />
 ---
-<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>
-<img width="100%" src="deep-dive-on-aws-lambda/10.png" />
+<a href="https://www.slideshare.net/scottleber/aws-lambda-73153540">(source)</a>aws-lambda-73153540/06
+<img width="100%" src="slideshare/aws-lambda-73153540/06.png" />
 ---
-<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>
-<img width="100%" src="deep-dive-on-aws-lambda/11.png" />
+<a href="https://www.slideshare.net/scottleber/aws-lambda-73153540">(source)</a>aws-lambda-73153540/04
+<img width="100%" src="slideshare/aws-lambda-73153540/04.png" />
+---
+<a href="https://www.slideshare.net/scottleber/aws-lambda-73153540">(source)</a>aws-lambda-73153540/07
+<img width="100%" src="slideshare/aws-lambda-73153540/07.png" />
+---
+<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>deep-dive-on-aws-lambda/09
+<img width="100%" src="slideshare/deep-dive-on-aws-lambda/09.png" />
+---
+<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>deep-dive-on-aws-lambda/10
+<img width="100%" src="slideshare/deep-dive-on-aws-lambda/10.png" />
 ---
 
+# Lambda CI/CD 
 
-<a href="https://www.slideshare.net/AmazonWebServices/intro-to-aws-lambda-london-loft">(source)</a>
-<img width="100%" src="intro-to-aws-lambda-london-loft/01.png" />
+Lambda requires fresh thought on deployment.
+
+can be deployed:
+
+- aws console
+- `lambda UpdateFunction` from machine with AWSSDK / aws-cli
+- Deploy from S3 with AWSSDK / aws-cli / infrastructure tool
+
+### Deploy from S3 - CI/CD
+
+- build artifact (.zip file)
+- upload file to S3
+- run `lambda UpdateFunction` from environment 
+
 ---
-https://www.slideshare.net/scottleber/aws-lambda-73153540
+<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>deep-dive-on-aws-lambda/07
+<img width="100%" src="slideshare/deep-dive-on-aws-lambda/07.png" />
 ---
+<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>deep-dive-on-aws-lambda/11
+<img width="100%" src="slideshare/deep-dive-on-aws-lambda/11.png" />
+---
+<a href="https://www.slideshare.net/AmazonWebServices/deep-dive-on-aws-lambda">(source)</a>deep-dive-on-aws-lambda/03
+<img width="100%" src="slideshare/deep-dive-on-aws-lambda/03.png" />
+
+---
+
+### Aside - terraform
+
+<a href="https://www.slideshare.net/leetrout/terraform-an-overview-introduction">(source)</a>
+<img width="100%" src="slideshare/an-introduction-to-terraform/01.png" />
+---
+<a href="https://www.slideshare.net/roidelapluie/an-introduction-to-terraform">(source)</a>
+<img width="100%" src="slideshare/an-introduction-to-terraform/02.png" />
+---
+<a href="https://www.slideshare.net/roidelapluie/an-introduction-to-terraform">(source)</a>
+<img width="100%" src="slideshare/an-introduction-to-terraform/03.png" />
+
+---
+
 ### Demo Event -> Lambda -> S3
 
-Setup a cloud 'cron' job to write to s3 every 30 seconds
-<a href="http://jeremievallee.com/2017/03/26/aws-lambda-terraform/">inspired by</a>
+Setup a cloud 'cron' job to write to s3 every minute
+
 Need
 
 - S3 bucket (for deploying lambda)
-- Event
-- Lambda
-- S3 bucket (to write to)
+
+- Cloudwatch Event
+
+- Lambda function - python code in zip file
+
+- S3 bucket (to write to, use the same)
+
 - Permissions for above (invocation and access)
 
 ---
+
 
 ### The end
 
